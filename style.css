@@ -1,0 +1,36 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#controls {
+    position: absolute;
+    right: 2vw;
+    top: 3vh;
+    width: 15vw;
+    height: 10vh;
+    border: 1px solid #000;
+    background-color: aliceblue;
+}
+
+#info-box {
+    position: absolute;
+    right: 2vw;
+    top: 15vh;
+    width: 15vw;
+    height: 30vh;
+    border: 1px solid #000;
+    background-color: aliceblue;
+}
+

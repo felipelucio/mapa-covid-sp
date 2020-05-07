@@ -1,0 +1,861 @@
+{
+    "version": 0.1,
+    "names": {
+        "JOSE BONIFACIO": "José Bonifácio",
+        "JD SAO LUIS": "Jd. São Luis",
+        "ARTUR ALVIM": "Arthur Alvim",
+        "JAGUARA": "Jaguará",
+        "VILA PRUDENTE": "Vila Prudente",
+        "JAGUARE": "Jaguaré",
+        "JARAGUA": "Jaraguá",
+        "JD HELENA": "Jd. Helena",
+        "JD PAULISTA": "Jd. Paulista",
+        "LAJEADO": "Lajeado",
+        "LAPA": "Lapa",
+        "LIBERDADE": "Liberdade",
+        "LIMAO": "Limão",
+        "VILA MEDEIROS": "Vila Medeiros",
+        "JD ANGELA": "Jd. Ângela",
+        "PARELHEIROS": "Parelheiros",
+        "VILA SONIA": "Vila Sônia",
+        "AGUA RASA": "Água Rasa",
+        "ALTO DE PINHEIROS": "Alto de Pinheiros",
+        "ANHANGUERA": "Anhanguera",
+        "ARICANDUVA": "Aricanduva",
+        "BARRA FUNDA": "Barra Funda",
+        "BELA VISTA": "Bela Vista",
+        "BELEM": "Belém",
+        "BOM RETIRO": "Bom Retiro",
+        "BRAS": "Brás",
+        "BRASILANDIA": "Brasilândia",
+        "BUTANTA": "Butantã",
+        "CACHOEIRINHA": "Cachoeirinha",
+        "CAMBUCI": "Cambuci",
+        "CAMPO BELO": "Campo Belo",
+        "CAMPO GRANDE": "Campo Grande",
+        "CAMPO LIMPO": "Campo Limpo",
+        "CANGAIBA": "Cangaíba",
+        "CAPAO REDONDO": "Capão Redondo",
+        "CARRAO": "Carrão",
+        "CASA VERDE": "Casa Verde",
+        "CID ADEMAR": "Cidade Ademar",
+        "CID DUTRA": "Cidade Dutra",
+        "CID LIDER": "Cidade Líder",
+        "CID TIRADENTES": "Cidade Tiradentes",
+        "CONSOLACAO": "Consolação",
+        "CURSINO": "Cursino",
+        "ERMELINO MATARAZZO": "Ermelino Matarazzo",
+        "FREGUESIA DO O": "Freguesia do Ó",
+        "GRAJAU": "Grajaú",
+        "GUAIANASES": "Guaianases",
+        "IGUATEMI": "Iguatemi",
+        "IPIRANGA": "Ipiranga",
+        "ITAIM BIBI": "Itaim Bibi",
+        "ITAIM PAULISTA": "Itaim Paulista",
+        "ITAQUERA": "Itaquera",
+        "JABAQUARA": "Jabaquara",
+        "JACANA": "Jaçanã",
+        "MANDAQUI": "Mandaqui",
+        "MARSILAC": "Marsilac",
+        "MOEMA": "Moema",
+        "MOOCA": "Moóca",
+        "MORUMBI": "Morumbi",
+        "PARI": "Pari",
+        "PARQUE DO CARMO": "Parque do Carmo",
+        "PEDREIRA": "Pedreira",
+        "PENHA": "Penha",
+        "PERDIZES": "Perdizes",
+        "PERUS": "Perus",
+        "PINHEIROS": "Pinheiros",
+        "PIRITUBA": "Pirituba",
+        "PONTE RASA": "Ponte Rasa",
+        "RAPOSO TAVARES": "Raposo Tavares",
+        "RIO PEQUENO": "Rio Pequeno",
+        "SACOMA": "Sacomã",
+        "SANTANA": "Santana",
+        "SANTO AMARO": "Santo Amaro",
+        "SAO DOMINGOS": "São Domingos",
+        "SAO LUCAS": "São Lucas",
+        "SAO MATEUS": "São Mateus",
+        "SAO MIGUEL": "São Miguel",
+        "SAO RAFAEL": "São Rafael",
+        "SAPOPEMBA": "Sapopemba",
+        "SAUDE": "Saúde",
+        "SE": "Sé",
+        "SOCORRO": "Socorro",
+        "TATUAPE": "Tatuapé",
+        "TREMEMBE": "Tremembé",
+        "TUCURUVI": "Tucuruvi",
+        "VILA ANDRADE": "Vila Andrade",
+        "VILA CURUCA": "Vila Curuçá",
+        "VILA FORMOSA": "Vila Formosa",
+        "VILA GUILHERME": "Vila Guilherme",
+        "VILA JACUI": "Vila Jacuí",
+        "VILA LEOPOLDINA": "Vila Leopoldina",
+        "VILA MARIA": "Vila Maria",
+        "VILA MARIANA": "Vila Mariana",
+        "VILA MATILDE": "Vila Matilde",
+        "SANTA CECILIA": "Santa Cecília",
+        "REPUBLICA": "República"
+    },
+    "dataset": {
+        "20200421": [
+            {
+                "id": "JOSE BONIFACIO",
+                "total": 27
+            },
+            {
+                "id": "JD SAO LUIS",
+                "total": 36
+            },
+            {
+                "id": "ARTUR ALVIM",
+                "total": 39
+            },
+            {
+                "id": "JAGUARA",
+                "total": 37
+            },
+            {
+                "id": "VILA PRUDENTE",
+                "total": 25
+            },
+            {
+                "id": "JAGUARE",
+                "total": 8
+            },
+            {
+                "id": "JARAGUA",
+                "total": 37
+            },
+            {
+                "id": "JD HELENA",
+                "total": 26
+            },
+            {
+                "id": "JD PAULISTA",
+                "total": 12
+            },
+            {
+                "id": "LAJEADO",
+                "total": 32
+            },
+            {
+                "id": "LAPA",
+                "total": 17
+            },
+            {
+                "id": "LIBERDADE",
+                "total": 27
+            },
+            {
+                "id": "LIMAO",
+                "total": 31
+            },
+            {
+                "id": "VILA MEDEIROS",
+                "total": 34
+            },
+            {
+                "id": "JD ANGELA",
+                "total": 32
+            },
+            {
+                "id": "PARELHEIROS",
+                "total": 14
+            },
+            {
+                "id": "VILA SONIA",
+                "total": 15
+            },
+            {
+                "id": "AGUA RASA",
+                "total": 26
+            },
+            {
+                "id": "ALTO DE PINHEIROS",
+                "total": 17
+            },
+            {
+                "id": "ANHANGUERA",
+                "total": 9
+            },
+            {
+                "id": "ARICANDUVA",
+                "total": 23
+            },
+            {
+                "id": "BARRA FUNDA",
+                "total": 3
+            },
+            {
+                "id": "BELA VISTA",
+                "total": 11
+            },
+            {
+                "id": "BELEM",
+                "total": 18
+            },
+            {
+                "id": "BOM RETIRO",
+                "total": 7
+            },
+            {
+                "id": "BRAS",
+                "total": 9
+            },
+            {
+                "id": "BRASILANDIA",
+                "total": 67
+            },
+            {
+                "id": "BUTANTA",
+                "total": 4
+            },
+            {
+                "id": "CACHOEIRINHA",
+                "total": 38
+            },
+            {
+                "id": "CAMBUCI",
+                "total": 11
+            },
+            {
+                "id": "CAMPO BELO",
+                "total": 20
+            },
+            {
+                "id": "CAMPO GRANDE",
+                "total": 14
+            },
+            {
+                "id": "CAMPO LIMPO",
+                "total": 16
+            },
+            {
+                "id": "CANGAIBA",
+                "total": 38
+            },
+            {
+                "id": "CAPAO REDONDO",
+                "total": 40
+            },
+            {
+                "id": "CARRAO",
+                "total": 23
+            },
+            {
+                "id": "CASA VERDE",
+                "total": 28
+            },
+            {
+                "id": "CID ADEMAR",
+                "total": 37
+            },
+            {
+                "id": "CID DUTRA",
+                "total": 40
+            },
+            {
+                "id": "CID LIDER",
+                "total": 26
+            },
+            {
+                "id": "CID TIRADENTES",
+                "total": 44
+            },
+            {
+                "id": "CONSOLACAO",
+                "total": 16
+            },
+            {
+                "id": "CURSINO",
+                "total": 24
+            },
+            {
+                "id": "ERMELINO MATARAZZO",
+                "total": 30
+            },
+            {
+                "id": "FREGUESIA DO O",
+                "total": 42
+            },
+            {
+                "id": "GRAJAU",
+                "total": 35
+            },
+            {
+                "id": "GUAIANASES",
+                "total": 24
+            },
+            {
+                "id": "IGUATEMI",
+                "total": 35
+            },
+            {
+                "id": "IPIRANGA",
+                "total": 30
+            },
+            {
+                "id": "ITAIM BIBI",
+                "total": 24
+            },
+            {
+                "id": "ITAIM PAULISTA",
+                "total": 30
+            },
+            {
+                "id": "ITAQUERA",
+                "total": 37
+            },
+            {
+                "id": "JABAQUARA",
+                "total": 33
+            },
+            {
+                "id": "JACANA",
+                "total": 20
+            },
+            {
+                "id": "MANDAQUI",
+                "total": 28
+            },
+            {
+                "id": "MARSILAC",
+                "total": 3
+            },
+            {
+                "id": "MOEMA",
+                "total": 18
+            },
+            {
+                "id": "MOOCA",
+                "total": 24
+            },
+            {
+                "id": "MORUMBI",
+                "total": 7
+            },
+            {
+                "id": "PARI",
+                "total": 8
+            },
+            {
+                "id": "PARQUE DO CARMO",
+                "total": 15
+            },
+            {
+                "id": "PEDREIRA",
+                "total": 14
+            },
+            {
+                "id": "PENHA",
+                "total": 33
+            },
+            {
+                "id": "PERDIZES",
+                "total": 25
+            },
+            {
+                "id": "PERUS",
+                "total": 16
+            },
+            {
+                "id": "PINHEIROS",
+                "total": 14
+            },
+            {
+                "id": "PIRITUBA",
+                "total": 33
+            },
+            {
+                "id": "PONTE RASA",
+                "total": 26
+            },
+            {
+                "id": "RAPOSO TAVARES",
+                "total": 7
+            },
+            {
+                "id": "RIO PEQUENO",
+                "total": 22
+            },
+            {
+                "id": "SACOMA",
+                "total": 44
+            },
+            {
+                "id": "SANTANA",
+                "total": 32
+            },
+            {
+                "id": "SANTO AMARO",
+                "total": 12
+            },
+            {
+                "id": "SAO DOMINGOS",
+                "total": 17
+            },
+            {
+                "id": "SAO LUCAS",
+                "total": 41
+            },
+            {
+                "id": "SAO MATEUS",
+                "total": 52
+            },
+            {
+                "id": "SAO MIGUEL",
+                "total": 28
+            },
+            {
+                "id": "SAO RAFAEL",
+                "total": 17
+            },
+            {
+                "id": "SAPOPEMBA",
+                "total": 64
+            },
+            {
+                "id": "SAUDE",
+                "total": 28
+            },
+            {
+                "id": "SE",
+                "total": 6
+            },
+            {
+                "id": "SOCORRO",
+                "total": 6
+            },
+            {
+                "id": "TATUAPE",
+                "total": 23
+            },
+            {
+                "id": "TREMEMBE",
+                "total": 34
+            },
+            {
+                "id": "TUCURUVI",
+                "total": 25
+            },
+            {
+                "id": "VILA ANDRADE",
+                "total": 14
+            },
+            {
+                "id": "VILA CURUCA",
+                "total": 27
+            },
+            {
+                "id": "VILA FORMOSA",
+                "total": 35
+            },
+            {
+                "id": "VILA GUILHERME",
+                "total": 9
+            },
+            {
+                "id": "VILA JACUI",
+                "total": 27
+            },
+            {
+                "id": "VILA LEOPOLDINA",
+                "total": 8
+            },
+            {
+                "id": "VILA MARIA",
+                "total": 30
+            },
+            {
+                "id": "VILA MARIANA",
+                "total": 31
+            },
+            {
+                "id": "VILA MATILDE",
+                "total": 30
+            },
+            {
+                "id": "SANTA CECILIA",
+                "total": 22
+            },
+            {
+                "id": "REPUBLICA",
+                "total": 10
+            }
+        ],
+        "20200424": [
+            {
+                "id": "JOSE BONIFACIO",
+                "total": 0
+            },
+            {
+                "id": "JD SAO LUIS",
+                "total": 0
+            },
+            {
+                "id": "ARTUR ALVIM",
+                "total": 0
+            },
+            {
+                "id": "JAGUARA",
+                "total": 0
+            },
+            {
+                "id": "VILA PRUDENTE",
+                "total": 0
+            },
+            {
+                "id": "JAGUARE",
+                "total": 0            },
+            {
+                "id": "JARAGUA",
+                "total": 0
+            },
+            {
+                "id": "JD HELENA",
+                "total": 0
+            },
+            {
+                "id": "JD PAULISTA",
+                "total": 0
+            },
+            {
+                "id": "LAJEADO",
+                "total": 0
+            },
+            {
+                "id": "LAPA",
+                "total": 0
+            },
+            {
+                "id": "LIBERDADE",
+                "total": 0
+            },
+            {
+                "id": "LIMAO",
+                "total": 0
+            },
+            {
+                "id": "VILA MEDEIROS",
+                "total": 0
+            },
+            {
+                "id": "JD ANGELA",
+                "total": 0
+            },
+            {
+                "id": "PARELHEIROS",
+                "total": 0
+            },
+            {
+                "id": "VILA SONIA",
+                "total": 0
+            },
+            {
+                "id": "AGUA RASA",
+                "total": 0
+            },
+            {
+                "id": "ALTO DE PINHEIROS",
+                "total": 0
+            },
+            {
+                "id": "ANHANGUERA",
+                "total": 0            },
+            {
+                "id": "ARICANDUVA",
+                "total": 0
+            },
+            {
+                "id": "BARRA FUNDA",
+                "total": 0            },
+            {
+                "id": "BELA VISTA",
+                "total": 0
+            },
+            {
+                "id": "BELEM",
+                "total": 0
+            },
+            {
+                "id": "BOM RETIRO",
+                "total": 0            },
+            {
+                "id": "BRAS",
+                "total": 0            },
+            {
+                "id": "BRASILANDIA",
+                "total": 0
+            },
+            {
+                "id": "BUTANTA",
+                "total": 0            },
+            {
+                "id": "CACHOEIRINHA",
+                "total": 0
+            },
+            {
+                "id": "CAMBUCI",
+                "total": 0
+            },
+            {
+                "id": "CAMPO BELO",
+                "total": 0
+            },
+            {
+                "id": "CAMPO GRANDE",
+                "total": 0
+            },
+            {
+                "id": "CAMPO LIMPO",
+                "total": 0
+            },
+            {
+                "id": "CANGAIBA",
+                "total": 0
+            },
+            {
+                "id": "CAPAO REDONDO",
+                "total": 0
+            },
+            {
+                "id": "CARRAO",
+                "total": 0
+            },
+            {
+                "id": "CASA VERDE",
+                "total": 0
+            },
+            {
+                "id": "CID ADEMAR",
+                "total": 0
+            },
+            {
+                "id": "CID DUTRA",
+                "total": 0
+            },
+            {
+                "id": "CID LIDER",
+                "total": 0
+            },
+            {
+                "id": "CID TIRADENTES",
+                "total": 0
+            },
+            {
+                "id": "CONSOLACAO",
+                "total": 0
+            },
+            {
+                "id": "CURSINO",
+                "total": 0
+            },
+            {
+                "id": "ERMELINO MATARAZZO",
+                "total": 0
+            },
+            {
+                "id": "FREGUESIA DO O",
+                "total": 0
+            },
+            {
+                "id": "GRAJAU",
+                "total": 0
+            },
+            {
+                "id": "GUAIANASES",
+                "total": 0
+            },
+            {
+                "id": "IGUATEMI",
+                "total": 0
+            },
+            {
+                "id": "IPIRANGA",
+                "total": 0
+            },
+            {
+                "id": "ITAIM BIBI",
+                "total": 0
+            },
+            {
+                "id": "ITAIM PAULISTA",
+                "total": 0
+            },
+            {
+                "id": "ITAQUERA",
+                "total": 0
+            },
+            {
+                "id": "JABAQUARA",
+                "total": 0
+            },
+            {
+                "id": "JACANA",
+                "total": 0
+            },
+            {
+                "id": "MANDAQUI",
+                "total": 0
+            },
+            {
+                "id": "MARSILAC",
+                "total": 0            },
+            {
+                "id": "MOEMA",
+                "total": 0
+            },
+            {
+                "id": "MOOCA",
+                "total": 0
+            },
+            {
+                "id": "MORUMBI",
+                "total": 0            },
+            {
+                "id": "PARI",
+                "total": 0            },
+            {
+                "id": "PARQUE DO CARMO",
+                "total": 0
+            },
+            {
+                "id": "PEDREIRA",
+                "total": 0
+            },
+            {
+                "id": "PENHA",
+                "total": 0
+            },
+            {
+                "id": "PERDIZES",
+                "total": 0
+            },
+            {
+                "id": "PERUS",
+                "total": 0
+            },
+            {
+                "id": "PINHEIROS",
+                "total": 0
+            },
+            {
+                "id": "PIRITUBA",
+                "total": 0
+            },
+            {
+                "id": "PONTE RASA",
+                "total": 0
+            },
+            {
+                "id": "RAPOSO TAVARES",
+                "total": 0            },
+            {
+                "id": "RIO PEQUENO",
+                "total": 0
+            },
+            {
+                "id": "SACOMA",
+                "total": 0
+            },
+            {
+                "id": "SANTANA",
+                "total": 0
+            },
+            {
+                "id": "SANTO AMARO",
+                "total": 0
+            },
+            {
+                "id": "SAO DOMINGOS",
+                "total": 0
+            },
+            {
+                "id": "SAO LUCAS",
+                "total": 0
+            },
+            {
+                "id": "SAO MATEUS",
+                "total": 0
+            },
+            {
+                "id": "SAO MIGUEL",
+                "total": 0
+            },
+            {
+                "id": "SAO RAFAEL",
+                "total": 0
+            },
+            {
+                "id": "SAPOPEMBA",
+                "total": 0
+            },
+            {
+                "id": "SAUDE",
+                "total": 0
+            },
+            {
+                "id": "SE",
+                "total": 0            },
+            {
+                "id": "SOCORRO",
+                "total": 0            },
+            {
+                "id": "TATUAPE",
+                "total": 0
+            },
+            {
+                "id": "TREMEMBE",
+                "total": 0
+            },
+            {
+                "id": "TUCURUVI",
+                "total": 0
+            },
+            {
+                "id": "VILA ANDRADE",
+                "total": 0
+            },
+            {
+                "id": "VILA CURUCA",
+                "total": 0
+            },
+            {
+                "id": "VILA FORMOSA",
+                "total": 0
+            },
+            {
+                "id": "VILA GUILHERME",
+                "total": 0            },
+            {
+                "id": "VILA JACUI",
+                "total": 0
+            },
+            {
+                "id": "VILA LEOPOLDINA",
+                "total": 0            },
+            {
+                "id": "VILA MARIA",
+                "total": 0
+            },
+            {
+                "id": "VILA MARIANA",
+                "total": 0
+            },
+            {
+                "id": "VILA MATILDE",
+                "total": 0
+            },
+            {
+                "id": "SANTA CECILIA",
+                "total": 0
+            },
+            {
+                "id": "REPUBLICA",
+                "total": 0
+            }
+        ]
+    }
+}

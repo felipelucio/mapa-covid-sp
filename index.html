@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geojs/0.19.8/geo.min.js"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info-box">
+        <div class="title">
+            <span class="bold">Distrito: </span>
+            <span class="title-text"></span>
+        </div>
+        <div class="deaths">
+            <span class="bold">Mortes: </span>
+            <span class="total-text"></span>
+        </div>
+    </div>
+    <div id="controls">
+        <div class="date-selector">
+            <div id="date-selector-label"></div>
+            <input id="date-selector-input" type="range" step="1" list="available-dates" />
+            <datalist id="available-dates"></datalist>
+        </div>
+    </div>
+    <script src="map_viewer.js"></script>
+</body>
+</html>
