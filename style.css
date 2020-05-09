@@ -18,21 +18,32 @@ html, body {
     position: absolute;
     right: 2vw;
     top: 3vh;
-    width: 15vw;
-    height: 10vh;
-    border: 1px solid #000;
-    background-color: aliceblue;
+    width: 20vw;
     z-index: 1000;
 }
 
-#info-box {
+.control-box {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+}
+
+#date-selector-input {
+    width: 85%;
+    margin-left: 5%;
+}
+
+#date-selector-label {
+    height: 30px;
+}
+
+.date-label {
     position: absolute;
-    right: 2vw;
-    top: 15vh;
-    width: 15vw;
-    height: 30vh;
-    border: 1px solid #000;
-    background-color: aliceblue;
-    z-index: 1000;
+    top: 15px;
+    font-size: 6pt;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
 }
-

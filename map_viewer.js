@@ -169,6 +169,16 @@ var MapViewer = {
                     el.setAttribute('value', i);
                     el.setAttribute('label', date);
                     that._datelist_el.appendChild(el);
+
+                    var padding = 5;
+                    var pct = i * (90 / that._available_dates.length);
+                    var label = date + "";
+                    label = label.substr(6,2) + "/" + label.substr(4,2);
+                    var label_el = document.createElement('div');
+                    label_el.classList.add('date-label');
+                    label_el.style.left = (padding + pct) + "%";
+                    label_el.textContent = label;
+                    that._date_slider_label_el.appendChild(label_el);
                 });
                 
                 that._calcDataRange('total');
