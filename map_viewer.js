@@ -52,6 +52,8 @@ var MapViewer = {
         this._datelist_el = document.getElementById('available-dates');
 
         this._info_box = document.getElementById('info-box');
+        this._info_box_none = this._info_box.getElementsByClassName('none')[0];
+        this._info_box_info = this._info_box.getElementsByClassName('info')[0];
         this._info_box_title = this._info_box.getElementsByClassName('title-text')[0];
         this._info_box_total = this._info_box.getElementsByClassName('total-text')[0];
 
@@ -165,18 +167,10 @@ var MapViewer = {
                 that._date_slider_el.setAttribute('value', last_date_idx);
                 that._date_slider_el.setAttribute('max', last_date_idx);
                 that._available_dates.forEach(function (date, i) {
-                    var el = document.createElement('option');
-                    el.setAttribute('value', i);
-                    el.setAttribute('label', date);
-                    that._datelist_el.appendChild(el);
-
-                    var padding = 5;
-                    var pct = i * (90 / that._available_dates.length);
                     var label = date + "";
                     label = label.substr(6,2) + "/" + label.substr(4,2);
                     var label_el = document.createElement('div');
                     label_el.classList.add('date-label');
-                    label_el.style.left = (padding + pct) + "%";
                     label_el.textContent = label;
                     that._date_slider_label_el.appendChild(label_el);
                 });
@@ -215,9 +209,17 @@ var MapViewer = {
         if(district[0]) {
             this._info_box_title.textContent = this.getDistrictName(feature_id);
             this._info_box_total.textContent = district[0].total;
+            this._info_box_none.classList.remove('on');
+            this._info_box_none.classList.add('off');
+            this._info_box_info.classList.remove('off');
+            this._info_box_info.classList.add('on');
         } else {
             this._info_box_title.textContent = "";
             this._info_box_total.textContent = "";
+            this._info_box_none.classList.remove('off');
+            this._info_box_none.classList.add('on');
+            this._info_box_info.classList.remove('on');
+            this._info_box_info.classList.add('off');
         }
     },
     

@@ -6,26 +6,30 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geojs/0.19.8/geo.min.js"
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="map"></div>
     <div id="controls">
         <div id="info-box" class="control-box">
-            <div class="title">
-                <span class="bold">Distrito: </span>
-                <span class="title-text"></span>
+            <div class="subtitle">Informações</div>
+            <div class="info off">
+                <div class="title">
+                    <span class="bold">Distrito: </span>
+                    <span class="title-text"></span>
+                </div>
+                <div class="deaths">
+                    <span class="bold">Total de Óbitos (confirmados e suspeitos): </span>
+                    <span class="total-text"></span>
+                </div>
             </div>
-            <div class="deaths">
-                <span class="bold">Mortes: </span>
-                <span class="total-text"></span>
-            </div>
+            <div class="none on">Selecione um distrito ao lado.</div>
         </div>
         
         <div id="date-selector" class="control-box">
+            <div class="subtitle">Selecione a data:</div>
             <div id="date-selector-label"></div>
             <input id="date-selector-input" type="range" step="1" list="available-dates" />
-            <datalist id="available-dates"></datalist>
         </div>
     </div>
     

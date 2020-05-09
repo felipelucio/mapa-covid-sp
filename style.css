@@ -4,6 +4,13 @@ html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+canvas {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; /* mobile webkit */
 }
 
 #map {
@@ -26,10 +33,16 @@ html, body {
     position: relative;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #000;
-    background-color: aliceblue;
+    border: 1px solid slategrey;
+    background-color: #eee;
     margin-bottom: 5px;
+    padding: 5px;
 }
+
+
+#info-box .none { text-align: center; }
+#info-box .on { display: block; }
+#info-box .off { display: none; }
 
 #date-selector-input {
     width: 85%;
@@ -37,13 +50,27 @@ html, body {
 }
 
 #date-selector-label {
-    height: 30px;
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    
 }
 
 .date-label {
-    position: absolute;
-    top: 15px;
-    font-size: 6pt;
+    font-size: 8pt;
     transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
+    transform-origin: bottom center;
 }
+
+.subtitle {
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: center;
+    margin-bottom: 5pt;
+}
+
+.bold { font-weight: bold; }
