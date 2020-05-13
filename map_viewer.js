@@ -35,18 +35,36 @@ var MapViewer = {
     // HTML elements
     //======================
     _root_el: null,
+    
     // + date selector 
+    _date_selector: null,
     _date_slider_el: null,
     _date_slider_label_el: null,
     _datelist_el: null,
+    
     // + info box
     _info_box: null,
     _info_box_title: null,
     _info_box_total: null,
 
+    // + menu
+    _menu_toggle_title: null,
+    _menu_toggle_infobox: null,
+    _menu_toggle_dateselector: null,
+
+    toggleBox: function(state, el) {
+        if(state) {
+            el.classList.remove('hide')
+        } else {
+            el.classList.add('hide')
+        }
+    },
 
     init: function(root_el) {
+        var that = this;
+
         this._root_el = document.getElementById(root_el);
+        this._date_selector = document.getElementById('date-selector');
         this._date_slider_el = document.getElementById('date-selector-input');
         this._date_slider_label_el = document.getElementById('date-selector-label');
         this._datelist_el = document.getElementById('available-dates');
@@ -56,6 +74,19 @@ var MapViewer = {
         this._info_box_info = this._info_box.getElementsByClassName('info')[0];
         this._info_box_title = this._info_box.getElementsByClassName('title-text')[0];
         this._info_box_total = this._info_box.getElementsByClassName('total-text')[0];
+
+        this._menu_toggle_title = document.getElementById('toggle-title');
+        this._menu_toggle_title.addEventListener('change', function(ev) {
+            that.toggleBox(ev.srcElement.checked, that._title_box)
+        })
+        this._menu_toggle_infobox = document.getElementById('toggle-info-box');
+        this._menu_toggle_infobox.addEventListener('change', function(ev) {
+            that.toggleBox(ev.srcElement.checked, that._info_box)
+        });
+        this._menu_toggle_dateselector = document.getElementById('toggle-date-selector');
+        this._menu_toggle_dateselector.addEventListener('change', function(ev) {
+            that.toggleBox(ev.srcElement.checked, that._date_selector)
+        })
 
         this._load();
     },
@@ -72,6 +103,7 @@ var MapViewer = {
             min: this.MIN_ZOOM,
             max: this.MAX_ZOOM
         });
+                  
 
         // create the polygons layer
         this._selection_layer = this._map.createLayer('feature');
@@ -81,6 +113,7 @@ var MapViewer = {
             that._selection_features.draw();
             that.updateInfoBox(that._selected_feature);
         });
+
         this._selection_features = this._selection_layer
             .createFeature('polygon', { selectionAPI: true })
             .style({
@@ -103,8 +136,8 @@ var MapViewer = {
             .geoOn(geo.event.feature.mouseclick, function (ev) {
                 that._selected_feature = ev.data.properties.NOME_DIST;
                 that.updateInfoBox(that._selected_feature);
-                this.modified();
-                this.draw();
+                //this.modified();
+                //this.draw();
             })
             .polygon(function (d) {
                 return {
@@ -145,6 +178,9 @@ var MapViewer = {
             that.setSelectedDate(id);
             that._update();
             that.updateInfoBox(that._selected_feature);
+            var date = that.getSelectedDate().date;
+            var week = that.getSelectedDate().week;
+            that._date_slider_label_el.innerText = date.substr(8, 2) + "/" + date.substr(5, 2) + " (Semana " + week + ")";
         });
 
         this._fetch('data/DEINFO_DISTRITO.json', function (map_data) {
@@ -157,25 +193,27 @@ var MapViewer = {
             that._fetch('data/dataset.json', function (data) {
                 that._dataset = data;
                 
+                // order the dates
+                data.dataset.sort(function(a, b) {
+                    if (a.week < b.week) return -1;
+                    if (a.week > b.week) return 1;
+                    return 0;
+                })
+
                 // loads all availables dates and select the most recent
-                var keys = Object.keys(that._dataset.dataset);
-                that._available_dates = keys.map(function (e) { return parseInt(e) });
+                that._available_dates = data.dataset.map(function (e, i) { return i; });
                 var last_date_idx = that._available_dates.length - 1;
                 that.setSelectedDate(last_date_idx);
 
                 //set available dates control
                 that._date_slider_el.setAttribute('value', last_date_idx);
                 that._date_slider_el.setAttribute('max', last_date_idx);
-                that._available_dates.forEach(function (date, i) {
-                    var label = date + "";
-                    label = label.substr(6,2) + "/" + label.substr(4,2);
-                    var label_el = document.createElement('div');
-                    label_el.classList.add('date-label');
-                    label_el.textContent = label;
-                    that._date_slider_label_el.appendChild(label_el);
-                });
+                var date = that.getSelectedDate().date;
+                var week = that.getSelectedDate().week;
+                that._date_slider_label_el.innerText = date.substr(8, 2) + "/" + date.substr(5, 2) + " (Semana " + week + ")";
                 
                 that._calcDataRange('total');
+
                 that._update();
             });
         });
@@ -227,8 +265,12 @@ var MapViewer = {
         this._selected_date = this._available_dates[id];
     },
 
+    getSelectedDate: function() {
+        return this._dataset.dataset[this._selected_date];
+    },
+
     getSelectedDataset: function() {
-        return this._dataset.dataset[this._selected_date].data;
+        return this.getSelectedDate().data;
     },
 
     getDistrictName: function(NOME_DIST) {

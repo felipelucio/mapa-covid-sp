@@ -1,5 +1,7 @@
 {
     "source": "https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/saude/PMSP_SMS_COVID19_Boletim%20Quinzenal_20200430.pdf",
+    "date": "2020-04-21",
+    "week": "17",
     "data": [
         {"id": "JOSE BONIFACIO", "total": 27},
         {"id": "JD SAO LUIS", "total": 36},

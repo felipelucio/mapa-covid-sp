@@ -1,5 +1,7 @@
 {
     "source": "https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/saude/PMSP_SMS_COVID19_Boletim%20Quinzenal_20200430.pdf",
+    "date": "2020-03-21",
+    "week": "12",
     "data": [
         {"id": "AGUA RASA", "total": 1},
         {"id": "ALTO DE PINHEIROS", "total": 0},
