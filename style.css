@@ -1,4 +1,4 @@
-html, body {
+html {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -6,6 +6,7 @@ html, body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10pt;
+    position: fixed
 }
 
 canvas {
@@ -43,7 +44,7 @@ canvas {
     text-align: center;
     left: 50%;
     margin-left: -100px;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 #info-box { 
