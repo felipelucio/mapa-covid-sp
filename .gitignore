@@ -1,3 +1,6 @@
 LAYER_DISTRITO
 env
 .vscode/settings.json
+node_modules
+.cache
+dist

@@ -1,0 +1,26 @@
+{
+  "name": "covid_viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "map_viewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipelucio/mapa-covid-sp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipelucio/mapa-covid-sp/issues"
+  },
+  "homepage": "https://github.com/felipelucio/mapa-covid-sp#readme",
+  "devDependencies": {
+    "csv-parse": "^4.10.1",
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "leaflet": "^1.6.0"
+  }
+}
