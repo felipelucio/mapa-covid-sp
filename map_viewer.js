@@ -99,6 +99,7 @@ var MapViewer = {
             center: { x: -46.63644541794065, y: -23.669851138320273 },
             clampBoundsX: true,
             clampBoundsY: true,
+            clampRotation: true,
             zoom: this.DEFAULT_ZOOM,
             min: this.MIN_ZOOM,
             max: this.MAX_ZOOM
@@ -214,6 +215,8 @@ var MapViewer = {
                 
                 that._calcDataRange('total');
 
+                that.updateInfoBox();
+
                 that._update();
             });
         });
@@ -245,19 +248,13 @@ var MapViewer = {
         });
         
         if(district[0]) {
+            var new_cases = this.getNewCases(feature_id);
             this._info_box_title.textContent = this.getDistrictName(feature_id);
-            this._info_box_total.textContent = district[0].total;
-            this._info_box_none.classList.remove('on');
-            this._info_box_none.classList.add('off');
-            this._info_box_info.classList.remove('off');
-            this._info_box_info.classList.add('on');
+            this._info_box_total.textContent = district[0].total + " ("+ new_cases + " novos)";
         } else {
-            this._info_box_title.textContent = "";
-            this._info_box_total.textContent = "";
-            this._info_box_none.classList.remove('off');
-            this._info_box_none.classList.add('on');
-            this._info_box_info.classList.remove('on');
-            this._info_box_info.classList.add('off');
+            var new_cases = this.getSumDeathsNew();
+            this._info_box_title.textContent = "São Paulo";
+            this._info_box_total.textContent = this.getSumDeaths() + " ("+ new_cases + " novos)";
         }
     },
     
@@ -269,6 +266,10 @@ var MapViewer = {
         return this._dataset.dataset[this._selected_date];
     },
 
+    getDataset: function(idx) {
+        return this._dataset.dataset[idx];
+    },
+
     getSelectedDataset: function() {
         return this.getSelectedDate().data;
     },
@@ -277,14 +278,55 @@ var MapViewer = {
         return this._dataset.names[NOME_DIST];
     },
 
-    getValueById: function(NOME_DIST, value='total') {
+    getSumDeathsNew: function() {
+        var curr = this.getSumDeaths();
+        var before = 0;
+        var before_dataset = this.getDataset(this._selected_date - 1);
+        if (before_dataset) {
+            before = before_dataset.data.reduce(function(acc, dist) { return acc + dist.total; }, 0);
+        }
+
+        return curr - before;
+    },
+
+    getSumDeaths: function() {
+        var dataset = this.getSelectedDataset();
+        var sum = dataset.reduce(function (acc, curr) { return acc + curr.total; }, 0);
+        return sum;
+    },
+
+    getValueById: function(NOME_DIST, value) {
         var return_value = false;
+        value = value || 'total';
         if(this.getSelectedDataset())
             this.getSelectedDataset().forEach(function(district) {
                 if(district.id == NOME_DIST)
                     return_value = district[value];
             });
         
+        return return_value;
+    },
+
+    getNewCases: function(NOME_DIST, value) {
+        value = value || "total";
+        
+        var return_value = false;
+        if(this.getSelectedDataset()) {
+            var curr = 0;
+            var before = 0;
+            this.getSelectedDataset().forEach(function(district) {
+                if(district.id == NOME_DIST)
+                    curr = district[value];
+            });
+            var before_dataset = this.getDataset(this._selected_date - 1);
+            if(before_dataset) {
+                before_dataset.data.forEach(function(el) {
+                    if(el.id == NOME_DIST)
+                        before = el[value];
+                })
+            }
+            return_value = curr - before;
+        }
         return return_value;
     },
 
