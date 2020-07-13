@@ -1,0 +1,3 @@
+[submodule "dados-covid-sp"]
+	path = dados-covid-sp
+	url = https://github.com/seade-R/dados-covid-sp.git
