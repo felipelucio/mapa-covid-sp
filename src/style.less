@@ -1,0 +1,130 @@
+@app_bg_color: #E4F9F5;
+@title_bg_color: #30E3CA;  
+@title_fg_color: #40514E;
+@menu_bg_color: #40514E;
+@menu_fg_color: #E4F9F5;  
+@menu_link_bg_color: #11999E;
+
+@title_height: 3em;
+
+html, body {
+    height: 100%;
+}
+
+.leaflet-container {
+    background-color: transparent !important;
+}
+
+.transition {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+    height: 100%;
+    overflow: hidden;
+
+    .menu {
+        position: absolute;
+        left: -150px;
+        top: 0;
+        height: 100%;
+        width: 150px;
+        z-index: 1100;
+        background-color: @menu_bg_color;
+        color: @menu_fg_color;
+
+        &.active {
+            left: 0;
+        }
+
+        a {
+            color: @menu_fg_color;
+        }
+        
+        .menu-link {
+            position: absolute;
+            height: @title_height;
+            width: 3.5em;
+            right: -3.5em;
+            top: 0;
+            background-color: @menu_link_bg_color;
+
+            span {
+                position: relative;
+                top: 1.3em;
+                left: 1.2em;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-left: 1em;
+        }
+    }
+
+    .title {
+        height: @title_height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: @title_bg_color;
+        color: @title_fg_color;
+
+        h1 {
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+
+    .content {
+        background-color: @app_bg_color;
+        height: calc(100% - @title_height);
+
+        #map {
+            height: 100%;
+
+            
+        }
+    }
+
+    .bottom-menu {
+        position: absolute;
+        width: 100%;
+        background-color: @menu_link_bg_color;
+        height: 30vh;
+        bottom: -30vh;
+        left: 0;
+        z-index: 1050;
+
+        &.active {
+            bottom: 0;
+        }
+
+        a {
+            color: @menu_fg_color;
+        }
+        
+        .bottom-menu-link {
+            position: absolute;
+            height: @title_height;
+            width: 3.5em;
+            top: -@title_height;
+            left: calc(50% - 1.75em);
+            background-color: @menu_link_bg_color;
+
+            span {
+                position: relative;
+                top: 1.3em;
+                left: 1.2em;
+            }
+        }
+    }
+}

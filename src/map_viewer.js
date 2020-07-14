@@ -80,8 +80,13 @@ export default class MapViewer {
     }
 
     load(root_el) {
-        this._map = leaflet.map(root_el)
-            .setView([-21, -51], 8);
+        this._map = leaflet.map(root_el, {
+            zoomControl: false
+        }).setView([-21, -51], 8);
+
+        // move the zoom control to the right;
+        leaflet.control.zoom({ position: 'topright' })
+            .addTo(this._map);
 
         this.cities_layer = leaflet.geoJSON(sp_shp.features, {
             style: this._style,

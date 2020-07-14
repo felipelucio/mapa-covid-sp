@@ -4,75 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 em São Paulo</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous" />
-        
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous" />
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+    <link rel="stylesheet" href="../node_modules/css.gg/icons/all.css">
+    <link href="./style.less" rel="stylesheet">
 </head>
 <body>
     <div id="layout">
-        <a href="#menu" id="menuLink" class="menu-link">
-            <span></span>
-        </a>
-        
-        <div id="menu">
-            <div class="pure-menu">
-                <span class="pure-menu-heading">Menu</span>
+        <div class="menu transition">
+            <a class="menu-link" href="#">
+                <span class="gg-menu"></span>
+            </a>
             
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item">
-                        <a href="#" class="pure-menu-link">
-                            <input type="checkbox" id="toggle-title" checked />
-                            <label for="toggle-title">Título</a>
-                        </a>
-                    </li>
-
-                    <li class="pure-menu-item">
-                        <a href="#" class="pure-menu-link">
-                            <input type="checkbox" id="toggle-info-box" checked />
-                            <label for="toggle-info-box">Informações</label>
-                        </a>
-                    </li>
-            
-                    <li class="pure-menu-item menu-item-divided">
-                        <a href="#" class="pure-menu-link">
-                            <input type="checkbox" id="toggle-date-selector" checked />
-                            <label for="toggle-date-selector">Seletor de Data</label>
-                        </a>
-                    </li>
-            
-                </ul>
-            </div>
+            <ul class="options">
+                <li>
+                    <a href="#">Infectados</a>
+                </li>
+                <li>
+                    <a href="#">Óbitos</a>
+                </li>
+                <li>
+                    <a href="#">Ocupação de UTI</a>
+                </li>
+            </ul>
         </div>
 
-        <div id="main">
-            <div class="content">
-                
-                <div id="map"></div>
-                
-                <div id="controls">
-                    <div id="main-title">
-                        <h1>Covid-19 em São Paulo</h1>
-                    </div>
-                    <div id="info-box" class="control-box">
-                        <div class="title">
-                            <span class="title-text subtitle"></span>
-                        </div>
-                        <div class="deaths">
-                            <span class="bold">Óbitos: </span>
-                            <span class="total-text"></span>
-                        </div>
-                    </div>
-                    
-                    <div id="date-selector" class="control-box">
-                        <div class="subtitle" id="date-selector-label"></div>
-                        <input id="date-selector-input" type="range" step="1" list="available-dates" />
-                    </div>
-                </div>
-            </div>
+        <div class="title">
+            <h1>Covid-19 em São Paulo</h1>
+        </div>
+
+        <div class="content">
+            <div id="map"></div>
+        </div>
+
+        <div class="bottom-menu transition">
+            <a class="bottom-menu-link">
+                <span class="gg-menu"></span>
+            </a>
         </div>
     </div>
     
